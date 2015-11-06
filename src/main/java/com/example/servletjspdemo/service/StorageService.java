@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.servletjspdemo.domain.Film;
-import com.example.servletjspdemo.domain.Rezyser;
 
 public class StorageService {
 

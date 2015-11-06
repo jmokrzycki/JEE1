@@ -1,4 +1,3 @@
-<%@page import="com.example.servletjspdemo.domain.Rezyser"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,16 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
+
+<jsp:setProperty name="film" property="*" />
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-<%
-  for (Rezyser film : storage.getAllPersons()) {
-	  out.println("<p>First name: " + film.getTytul() + "; Year of birth: " + film.getRok_premiery() + "</p>");
-  }
-%>
-<p>
-  <a href="getPersonData.jsp">Add another film</a>
-</p>
 
+<% 
+  storage.add(film);
+%>
+
+<p>Following film has been added to storage: </p>
+<p>First namasde: ${film.tytul} </p>
+<p>Year of birth: <jsp:getProperty name="film" property="nazwisko"></jsp:getProperty></p>
+<p>
+  <a href="showAllFilm.jsp">Show all persons</a>
+</p>
 </body>
 </html>

@@ -1,6 +1,5 @@
 package com.example.servletjspdemo.domain;
 
-
 public class Rezyser {
 
     private String imie = "Jan";
