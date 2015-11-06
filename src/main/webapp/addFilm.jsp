@@ -18,8 +18,8 @@
 %>
 
 <p>Following film has been added to storage: </p>
-<p>First namasde: ${film.tytul} </p>
-<p>Year of birth: <jsp:getProperty name="film" property="nazwisko"></jsp:getProperty></p>
+<p>Tytul: ${film.tytul} </p>
+<p>Rok premiery: <jsp:getProperty name="film" property="rok_premiery"></jsp:getProperty></p>
 <p>
   <a href="showAllFilm.jsp">Show all persons</a>
 </p>
