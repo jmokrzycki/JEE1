@@ -16,7 +16,7 @@
   }
 %>
 <p>
-  <a href="getFilmData.jsp">Add another film</a>
+    <a href="index.jsp">Strona glowna</a>
 </p>
 
 </body>

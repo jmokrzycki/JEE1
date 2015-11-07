@@ -14,15 +14,15 @@
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
 
 <% 
-  storage.add(film);
+  storage.delete(film);
 %>
 
-<p>Film zostal dodany: </p>
+<p>Following film has been added to storage: (addFilm.jsp)</p>
 <p>Tytul: ${film.tytul} </p>
 <p>Rok premiery: ${film.rok_premiery}</p>
 <p>
     <a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><br/>
-    <a href="addGetFilmData.jsp">Dodaj inny film</a><br/>
+    <a href="deleteGetFilmData.jsp">Usun inny film</a><br/>
     <a href="index.jsp">Strona glowna</a>
 </p>
 </body>

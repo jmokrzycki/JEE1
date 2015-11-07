@@ -4,6 +4,7 @@ public class Film {
 	
 	private String tytul = "unknown";
 	private String rok_premiery = "1900";
+
 	
 	public Film() {
 		super();

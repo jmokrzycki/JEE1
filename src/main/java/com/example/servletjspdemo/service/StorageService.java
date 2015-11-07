@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.servletjspdemo.domain.Film;
+import com.example.servletjspdemo.domain.Rezyser;
 
 public class StorageService {
 
@@ -14,6 +15,19 @@ public class StorageService {
         db.add(newFilm);
     }
 
+    public void delete(Film film){
+        int i = 0;
+        for(Film f : db){
+            if(f.getTytul().equals(film.getTytul())){
+                break;
+            }
+            i++;
+        }
+        db.remove(i);
+    }
+
+
+
     public List<Film> getAllFilm(){
         return db;
     }
@@ -21,12 +35,12 @@ public class StorageService {
 
 
    //private List<Rezyser> db = new ArrayList<Rezyser>();
-
+//
    //public void add(Rezyser rezyser){
    //    Rezyser newRezyser = new Rezyser(rezyser.getImie(), rezyser.getNazwisko());
    //    db.add(newRezyser);
    //}
-
+//
    //public List<Rezyser> getAllRezyser(){
    //        return db;
    //}
