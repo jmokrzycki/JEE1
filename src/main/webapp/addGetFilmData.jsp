@@ -13,8 +13,8 @@
 
 <form action="addFilm.jsp">
 
-      Tytul :<input type="text" name="tytul" value="${film.tytul}" /><br />
-      Rok premiery :<input type="text"  name="rok_premiery" value="${film.rok_premiery}" /><br />
+      Tytul: <input type="text" name="tytul" value="${film.tytul}" /><br />
+      Rok premiery: <input type="text"  name="rok_premiery" value="${film.rok_premiery}" /><br />
       <input type="submit" value=" OK ">
   
 </form>

@@ -13,7 +13,7 @@
 
 <form action="deleteFilm.jsp">
 
-        Tytul :(getFilmData.jsp)<input type="text" name="tytul" value="${film.tytul}" /><br />
+        Tytul:<input type="text" name="tytul" value="${film.tytul}" /><br />
         <input type="submit" value=" OK ">
 
 </form>

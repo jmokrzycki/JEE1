@@ -17,7 +17,7 @@
   storage.delete(film);
 %>
 
-<p>Following film has been added to storage: (addFilm.jsp)</p>
+<p>Film zostal usuniety:</p>
 <p>Tytul: ${film.tytul} </p>
 <p>Rok premiery: ${film.rok_premiery}</p>
 <p>

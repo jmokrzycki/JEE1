@@ -8,9 +8,9 @@
         <title>Demo application</title>
     </head>
     <body>
-        <h2>Simple demo application with Java EE 6 Servlet (3.0) and JSP</h2>
+        <h2>Baza filmow</h2>
         <p><a href="hello">See greetings from servlet</a></p>
-        <p><a href="form">Fill a form</a></p>
+        <p><a href="ankieta">Ankieta</a></p>
         <p><a href="addGetFilmData.jsp">Dodaj film</a></p>
         <p><a href="deleteGetFilmData.jsp">Usun film</a></p>
         <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a></p>

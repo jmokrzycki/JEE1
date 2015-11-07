@@ -9,26 +9,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/form")
-public class FormServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/ankieta")
+public class AnkietaServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		response.setContentType("text/html");
-		
+
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Simple form servlet</h2>" +
+		out.println("<html><body><h2>Ankietasda</h2><h3>Wybierz swoje ulubione gatunki filmowe:</h3>" +
 				"<form action='data'>" +
-				"First name: <input type='text' name='firstName' /> <br />" +
-				"<input type='checkbox' name='hobby' value='bicycle'>I like riding a bicycle<br />" +
-				"<input type='checkbox' name='hobby' value='tv'>I like watching TV<br />" +
-				"<input type='checkbox' name='hobby' value='beer'>I like dringking beer<br />" +
-				"<input type='checkbox' name='hobby' value='books'>I like reading books<br />" +
-				"<input type='submit' value=' OK ' />" +
+				"<input type='checkbox' name='ankietaOdpowiedzi' value='sensacyjny'>Sensacyjny<br />" +
+				"<input type='checkbox' name='ankietaOdpowiedzi' value='scifi'>Sci-Fi<br />" +
+				"<input type='checkbox' name='ankietaOdpowiedzi' value='horror'>Horror<br />" +
+				"<input type='checkbox' name='ankietaOdpowiedzi' value='akcja'>Akcja<br />" +
+				"<input type='submit' value=' OK' />" +
 				"</form>" +
 				"</body></html>");
 		out.close();
