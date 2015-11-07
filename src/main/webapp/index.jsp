@@ -14,6 +14,7 @@
         <p><a href="addGetFilmData.jsp">Dodaj film</a></p>
         <p><a href="deleteGetFilmData.jsp">Usun film</a></p>
         <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a></p>
+        <p><a href="searchGetFilmData.jsp">Szukaj filmu</a></p>
 
     </body>
 </html>

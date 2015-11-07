@@ -21,9 +21,9 @@
 <p>Tytul: ${film.tytul} </p>
 <p>Rok premiery: ${film.rok_premiery}</p>
 <p>
-    <a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><br/>
-    <a href="addGetFilmData.jsp">Dodaj inny film</a><br/>
-    <a href="index.jsp">Strona glowna</a>
+<p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><p>
+<p><a href="addGetFilmData.jsp">Dodaj inny film</a><p>
+<p><a href="index.jsp">Strona glowna</a><p>
 </p>
 </body>
 </html>

@@ -26,7 +26,17 @@ public class StorageService {
         db.remove(i);
     }
 
+    public List<Film> searchFilm(Film film){
+        List<Film> dbOut = new ArrayList<Film>();
 
+        //int i = 0;
+        //for(Film f : db){
+        //    if(f.getTytul().equals(film.getTytul())){
+        //        dbOut.add(film);
+        //    }
+        //}
+        return dbOut;
+    }
 
     public List<Film> getAllFilm(){
         return db;
