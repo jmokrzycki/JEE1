@@ -21,7 +21,7 @@ public class AnkietaServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Ankietasda</h2><h3>Wybierz swoje ulubione gatunki filmowe:</h3>" +
+		out.println("<html><body><h2>Ankieta</h2><h3>Wybierz swoje ulubione gatunki filmowe:</h3>" +
 				"<form action='data'>" +
 				"<input type='checkbox' name='ankietaOdpowiedzi' value='sensacyjny'>Sensacyjny<br />" +
 				"<input type='checkbox' name='ankietaOdpowiedzi' value='scifi'>Sci-Fi<br />" +

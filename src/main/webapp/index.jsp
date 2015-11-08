@@ -9,7 +9,6 @@
     </head>
     <body>
         <h2>Baza filmow</h2>
-        <p><a href="hello">See greetings from servlet</a></p>
         <p><a href="ankieta">Ankieta</a></p>
         <p><a href="addGetFilmData.jsp">Dodaj film</a></p>
         <p><a href="deleteGetFilmData.jsp">Usun film</a></p>
