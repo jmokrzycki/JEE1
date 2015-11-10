@@ -13,7 +13,7 @@
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
 
-<% 
+<%
   storage.add(film);
 %>
 

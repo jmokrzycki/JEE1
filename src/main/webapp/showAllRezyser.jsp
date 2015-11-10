@@ -1,3 +1,4 @@
+<%@ page import="com.example.servletjspdemo.domain.Rezyser" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,15 +10,15 @@
 <body>
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-<jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
-
-<form action="addFilm.jsp">
-
-      Tytul: <input type="text" name="tytul" value="${film.tytul}" /><br />
-      Rok premiery: <input type="text"  name="rok_premiery" value="${film.rok_premiery}" /><br />
-      <input type="submit" value=" OK ">
-
-</form>
+<p>Lista wszystkich rezyserow:</p>
+<%
+  for (Rezyser rezyser : storage.getAllRezyser()) {
+	  out.println("<p>Imie: " + rezyser.getImie() + "; Nazwisko: " + rezyser.getNazwisko() + "</p>");
+  }
+%>
+<p>
+    <a href="index.jsp">Strona glowna</a>
+</p>
 
 </body>
 </html>

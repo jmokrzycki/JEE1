@@ -9,14 +9,14 @@
 <body>
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-<jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
+<jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
 
-<form action="addFilm.jsp">
+<form action="searchRezyser.jsp">
 
-      Tytul: <input type="text" name="tytul" value="${film.tytul}" /><br />
-      Rok premiery: <input type="text"  name="rok_premiery" value="${film.rok_premiery}" /><br />
+      Imie :<input type="text" name="tytul" value="${rezyser.imie}" /><br />
+
       <input type="submit" value=" OK ">
-
+  
 </form>
 
 </body>

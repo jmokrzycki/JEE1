@@ -7,23 +7,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
+<jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
 
-<jsp:setProperty name="film" property="*" />
+<jsp:setProperty name="rezyser" property="*" />
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
 
 <%
-  storage.delete(film);
+  storage.addRezyser(rezyser);
 %>
 
-<p>Film zostal usuniety:</p>
-<p>Tytul: ${film.tytul} </p>
-<p>Rok premiery: ${film.rok_premiery}</p>
+<p>Rezyser zostal dodany: </p>
+<p>Tytul: ${rezyser.imie} </p>
+<p>Rok premiery: ${rezyser.nazwisko}</p>
 <p>
-    <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><p>
-    <p><a href="deleteGetFilmData.jsp">Usun inny film</a><p>
-    <p><a href="index.jsp">Strona glowna</a><p>
+<p><a href="showAllRezyser.jsp">Pokaz wszystkich rezyserow</a><p>
+<p><a href="addGetRezyserData.jsp">Dodaj innego rezysera</a><p>
+<p><a href="index.jsp">Strona glowna</a><p>
 </p>
 </body>
 </html>

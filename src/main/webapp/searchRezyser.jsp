@@ -1,3 +1,4 @@
+<%@ page import="com.example.servletjspdemo.domain.Rezyser" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,22 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
-
-<jsp:setProperty name="film" property="*" />
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
+<p>Znalezieni rezyserzy:</p>
 <%
-  storage.delete(film);
+    for (Rezyser rezyser : storage.getAllRezyser()) {
+        out.println("<p>Imie: " + rezyser.getImie() + "; Nazwisko: " + rezyser.getNazwisko() + "</p>");
+    }
 %>
-
-<p>Film zostal usuniety:</p>
-<p>Tytul: ${film.tytul} </p>
-<p>Rok premiery: ${film.rok_premiery}</p>
 <p>
-    <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><p>
-    <p><a href="deleteGetFilmData.jsp">Usun inny film</a><p>
+    <p><a href="showAllRezyser.jsp">Pokaz wszystkich rezyserow</a><p>
+    <p><a href="searchGetRezyserData.jsp">Szukaj innego rezysera</a><p>
     <p><a href="index.jsp">Strona glowna</a><p>
 </p>
 </body>
