@@ -9,12 +9,16 @@
 </head>
 <body>
 
+<jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
+
+<jsp:setProperty name="rezyser" property="*" />
+
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-<p>Znalezieni rezyserzy:</p>
+
+<p>Znaleziony rezyser:</p>
 <%
-    for (Rezyser rezyser : storage.getAllRezyser()) {
-        out.println("<p>Imie: " + rezyser.getImie() + "; Nazwisko: " + rezyser.getNazwisko() + "</p>");
-    }
+    rezyser = storage.searchRezyser(rezyser);
+    out.println("<p>Tytul: " + rezyser.getImie() + "; Rok premiery: " + rezyser.getNazwisko() + "</p>");
 %>
 <p>
     <p><a href="showAllRezyser.jsp">Pokaz wszystkich rezyserow</a><p>

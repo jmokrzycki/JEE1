@@ -26,22 +26,27 @@ public class StorageService {
         db.remove(i);
     }
 
-    public List<Film> searchFilm(Film film){
-        List<Film> dbOut = new ArrayList<Film>();
+    public Film searchFilm(Film film){
+        for(Film f : db){
+            if(film.getTytul().equals(f.getTytul())){
+                return f;
+            }
+        }
+        return film;
+    }
 
-        //int i = 0;
-        //for(Film f : db){
-        //    if(f.getTytul().equals(film.getTytul())){
-        //        dbOut.add(film);
-        //    }
-        //}
-        return dbOut;
+    public void updateFilm(Film film_stary, Film film){
+        for(Film f : db){
+            if(film_stary.getTytul().equals(f.getTytul())){
+                f.setTytul(film.getTytul());
+                f.setRok_premiery(film.getRok_premiery());
+            }
+        }
     }
 
     public List<Film> getAllFilm(){
         return db;
     }
-
 
 
 
@@ -63,25 +68,27 @@ public class StorageService {
         db.remove(i);
     }
 
-    public List<Rezyser> searchRezyser(Rezyser rezyser){
-        List<Rezyser> dbOut = new ArrayList<Rezyser>();
-
-        //int i = 0;
-        //for(Rezyser f : db){
-        //    if(f.getTytul().equals(rezyser.getTytul())){
-        //        dbOut.add(rezyser);
-        //    }
-        //}
-        return dbOut;
+    public Rezyser searchRezyser(Rezyser rezyser){
+        for(Rezyser r : db1){
+            if(rezyser.getImie().equals(r.getImie())){
+                return r;
+            }
+        }
+        return rezyser;
     }
+
+    public void updateRezyser(Rezyser rezyser_stary, Rezyser rezyser){
+        for(Rezyser r : db1){
+            if(rezyser_stary.getImie().equals(r.getImie())){
+                r.setImie(rezyser.getImie());
+                r.setNazwisko(rezyser.getNazwisko());
+            }
+        }
+    }
+
 
     public List<Rezyser> getAllRezyser(){
         return db1;
     }
-
-
-
-
-
 }
 

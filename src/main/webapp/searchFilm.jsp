@@ -9,12 +9,16 @@
 </head>
 <body>
 
+<jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
+
+<jsp:setProperty name="film" property="*" />
+
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-<p>Znalezione filmy:</p>
+
+<p>Znaleziony film:</p>
 <%
-    for (Film film : storage.getAllFilm()) {
+        film = storage.searchFilm(film);
         out.println("<p>Tytul: " + film.getTytul() + "; Rok premiery: " + film.getRok_premiery() + "</p>");
-    }
 %>
 <p>
     <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><p>

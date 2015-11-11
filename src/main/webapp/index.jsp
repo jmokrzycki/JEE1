@@ -15,11 +15,13 @@
         <p><a href="deleteGetFilmData.jsp">Usun film</a></p>
         <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a></p>
         <p><a href="searchGetFilmData.jsp">Szukaj filmu</a></p>
+        <p><a href="updateGetFilmData.jsp">Aktualizuj film</a></p>
         <br/>
         <p><a href="addGetRezyserData.jsp">Dodaj rezysera</a></p>
         <p><a href="deleteGetRezyserData.jsp">Usun rezysera</a></p>
         <p><a href="showAllRezyser.jsp">Pokaz wszystkich rezyserow</a></p>
         <p><a href="searchGetRezyserData.jsp">Szukaj rezysera</a></p>
+        <p><a href="updateGetRezyserData.jsp">Aktualizuj rezysera</a></p>
 
     </body>
 </html>
