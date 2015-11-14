@@ -9,8 +9,6 @@
     </head>
     <body>
         <h2>Baza filmow</h2>
-        <p><a href="ankieta">Ankieta</a></p>
-        <br/>
         <p><a href="addGetFilmData.jsp">Dodaj film</a></p>
         <p><a href="deleteGetFilmData.jsp">Usun film</a></p>
         <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a></p>
@@ -22,6 +20,11 @@
         <p><a href="showAllRezyser.jsp">Pokaz wszystkich rezyserow</a></p>
         <p><a href="searchGetRezyserData.jsp">Szukaj rezysera</a></p>
         <p><a href="updateGetRezyserData.jsp">Aktualizuj rezysera</a></p>
+        <br/>
+        <p><a href="generatorGatunkow">Wylosuj film do obejrzenia na dziś:</a></p>
 
+
+        <jsp:useBean id="msg" class="com.example.servletjspdemo.web.GatunkiFimow" scope="request" />
+        <p>Wylosowano: <jsp:getProperty name="msg" property="data"/></p>
     </body>
 </html>
