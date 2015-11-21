@@ -10,16 +10,19 @@
 <jsp:useBean id="film_stary" class="com.example.servletjspdemo.domain.Film" scope="session" />
 <jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
 
-<jsp:setProperty name="film_stary" property="*" />
 <jsp:setProperty name="film" property="*" />
-
+<jsp:setProperty name="film_stary" property="*" />
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application"/>
-
 <%
-  storage.updateFilm(film_stary, film);
+    try{
+        storage.updateFilm(film_stary, film);
+    }
+    catch(Exception e) {
+        request.getRequestDispatcher("notFoundElement.jsp").forward(request, response);
+    }
 %>
-
 <p>Film zostal dodany: </p>
+<p>Tytul_s: ${film_stary.tytul} </p>
 <p>Tytul: ${film.tytul} </p>
 <p>Rok premiery: ${film.rok_premiery}</p>
 <p>

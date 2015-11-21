@@ -8,15 +8,16 @@
 </head>
 <body>
 <jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
-
 <jsp:setProperty name="film" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
 <%
-  storage.delete(film);
+    try {
+        storage.delete(film);
+    }
+    catch(Exception e) {
+        request.getRequestDispatcher("notFoundElement.jsp").forward(request, response);
+    }
 %>
-
 <p>Film zostal usuniety:</p>
 <p>Tytul: ${film.tytul} </p>
 <p>Rok premiery: ${film.rok_premiery}</p>

@@ -7,16 +7,11 @@
     <title>Insert title here</title>
 </head>
 <body>
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
 <jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
-
 <form action="deleteFilm.jsp">
-
         Tytul:<input type="text" name="tytul" value="${film.tytul}" /><br />
         <input type="submit" value=" OK ">
-
 </form>
-
 </body>
 </html>

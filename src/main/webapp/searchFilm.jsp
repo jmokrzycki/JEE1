@@ -8,17 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
-
 <jsp:setProperty name="film" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
 <p>Znaleziony film:</p>
 <%
+    try {
         film = storage.searchFilm(film);
         out.println("<p>Tytul: " + film.getTytul() + "; Rok premiery: " + film.getRok_premiery() + "</p>");
+    }
+    catch(Exception e) {
+        request.getRequestDispatcher("notFoundElement.jsp").forward(request, response);
+    }
 %>
 <p>
     <p><a href="showAllFilm.jsp">Pokaz wszystkie filmy</a><p>

@@ -9,17 +9,18 @@
 <body>
 <jsp:useBean id="rezyser_stary" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
 <jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
-
 <jsp:setProperty name="rezyser_stary" property="*" />
 <jsp:setProperty name="rezyser" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application"/>
-
 <%
-  storage.updateRezyser(rezyser_stary, rezyser);
+    try{
+        storage.updateRezyser(rezyser_stary, rezyser);
+    }
+    catch(Exception e) {
+        request.getRequestDispatcher("notFoundElement.jsp").forward(request, response);
+    }
 %>
-
-<p>Rezyser zostal dodany: </p>
+<p>Rezyser zostal zaktualizowany: </p>
 <p>Tytul: ${rezyser.imie} </p>
 <p>Rok premiery: ${rezyser.nazwisko}</p>
 <p>

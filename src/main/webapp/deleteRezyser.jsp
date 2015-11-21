@@ -8,15 +8,16 @@
 </head>
 <body>
 <jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
-
 <jsp:setProperty name="rezyser" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
 <%
-  storage.deleteRezyser(rezyser);
+    try{
+        storage.deleteRezyser(rezyser);
+    }
+    catch(Exception e) {
+        request.getRequestDispatcher("notFoundElement.jsp").forward(request, response);
+    }
 %>
-
 <p>Rezyser zostal usuniety:</p>
 <p>Tytul: ${rezyser.imie} </p>
 <p>Rok premiery: ${rezyser.nazwisko}</p>

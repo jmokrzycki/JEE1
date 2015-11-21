@@ -7,10 +7,8 @@
     <title>Insert title here</title>
 </head>
 <body>
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application"/>
 <jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session"/>
-
 <form action="addRezyser.jsp">
 
     Imie: <input type="text" name="imie" value="${rezyser.imie}"/><br/>
@@ -18,6 +16,5 @@
     <input type="submit" value=" OK ">
 
 </form>
-
 </body>
 </html>

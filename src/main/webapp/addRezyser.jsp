@@ -8,15 +8,11 @@
 </head>
 <body>
 <jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
-
 <jsp:setProperty name="rezyser" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
 <%
   storage.addRezyser(rezyser);
 %>
-
 <p>Rezyser zostal dodany: </p>
 <p>Tytul: ${rezyser.imie} </p>
 <p>Rok premiery: ${rezyser.nazwisko}</p>

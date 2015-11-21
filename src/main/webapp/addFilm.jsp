@@ -8,15 +8,11 @@
 </head>
 <body>
 <jsp:useBean id="film" class="com.example.servletjspdemo.domain.Film" scope="session" />
-
 <jsp:setProperty name="film" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
 <%
   storage.add(film);
 %>
-
 <p>Film zostal dodany: </p>
 <p>Tytul: ${film.tytul} </p>
 <p>Rok premiery: ${film.rok_premiery}</p>

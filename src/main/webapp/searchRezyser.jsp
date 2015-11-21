@@ -8,17 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <jsp:useBean id="rezyser" class="com.example.servletjspdemo.domain.Rezyser" scope="session" />
-
 <jsp:setProperty name="rezyser" property="*" />
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
-
 <p>Znaleziony rezyser:</p>
 <%
-    rezyser = storage.searchRezyser(rezyser);
-    out.println("<p>Tytul: " + rezyser.getImie() + "; Rok premiery: " + rezyser.getNazwisko() + "</p>");
+    try{
+        rezyser = storage.searchRezyser(rezyser);
+        out.println("<p>Tytul: " + rezyser.getImie() + "; Rok premiery: " + rezyser.getNazwisko() + "</p>");
+    }
+    catch(Exception e) {
+        request.getRequestDispatcher("notFoundElement.jsp").forward(request, response);
+    }
 %>
 <p>
     <p><a href="showAllRezyser.jsp">Pokaz wszystkich rezyserow</a><p>
